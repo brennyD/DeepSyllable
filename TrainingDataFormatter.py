@@ -9,8 +9,6 @@ Input = open("Syllables.txt", "r")
 output = open("Training_Data.txt", "w+")
 
 
-
-
 #The longest word length found in this training list will be the number of
 #input neurons
 longestWord = ''
@@ -28,8 +26,11 @@ for text in Input:
     if len(arr[0]) > len(longestWord):
         longestWord = arr[0]
 
-   # print(arr[0] + " " + str(sylCount) + "\n")
 
     output.write(arr[0] + " " + str(sylCount) + "\n")
+
+
+output.write(str(len(longestWord)) + " " + str(biggestSyllable))
+
 
 output.close()
